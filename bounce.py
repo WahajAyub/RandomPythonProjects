@@ -4,7 +4,6 @@ Created on Mon Apr 29 13:47:34 2019
 
 @author: wahaj
 5"""
-import numpy as np
 import math
 
 class Box:
@@ -57,7 +56,7 @@ counter = 0
 digits = int (input ("Enter Number of Digits: "))
 timesteps = 100
 a = Box(1, 20, 0, 100)
-mb = math.pow(100, (digits-1))
+mb = 100 ** (digits-1)
 b = Box((mb), 100, (-5/timesteps), 200)
 
 
@@ -76,5 +75,5 @@ while (True):
             break
 #    print (counter)
 print ("collisions", counter)
-piestimate = counter/(math.pow(10, (digits-1)))
+piestimate = counter/(10**(digits-1))
 print ("pi is approximately equal to {}".format(piestimate))
