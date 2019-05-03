@@ -42,7 +42,7 @@ class Box:
         self.v *= -1
     
     def checkIfFinalCollision (self, other):
-#        print ("v1 {} v2 {}", self.v, other.v)
+#        print ("v1 {} v2 {}".format(self.v, other.v))
         if self.v >= 0:
             if other.v > self.v:
                 return True
@@ -77,4 +77,4 @@ while (True):
 #    print (counter)
 print ("collisions", counter)
 piestimate = counter/(math.pow(10, (digits-1)))
-print ("pi is approximately equal to ", piestimate)
+print ("pi is approximately equal to {}".format(piestimate))
